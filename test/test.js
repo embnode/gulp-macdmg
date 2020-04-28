@@ -3,7 +3,7 @@
 
 'use strict';
 
-var appdmg = require('../');
+var macdmg = require('../');
 var gulp = require('gulp');
 
 require('mocha');
@@ -14,7 +14,7 @@ describe('gulp-macdmg', function() {
     var errored = false;
 
     gulp.src(["."])
-      .pipe(appdmg({
+      .pipe(macdmg({
         source: 'test/res/appdmg.json',
         target: 'test/build/app.dmg'
       }))

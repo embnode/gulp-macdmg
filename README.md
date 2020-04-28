@@ -1,4 +1,4 @@
-gulp-appdmg
+gulp-macdmg
 ========================
 
 Generate beautiful DMG-images for your OS X applications.
@@ -8,7 +8,7 @@ Generate beautiful DMG-images for your OS X applications.
 <table>
   <tr>
     <td>Package</td>
-    <td>gulp-appdmg</td>
+    <td>gulp-macdmg</td>
   </tr>
   <tr>
     <td>Description</td>
@@ -23,11 +23,11 @@ Generate beautiful DMG-images for your OS X applications.
 ## Usage
 
 ```javascript
-var appdmg = require('gulp-appdmg');
+var macdmg = require('gulp-macdmg');
 
 gulp.task('release-osx', function() {
   return gulp.src([])
-    .pipe(appdmg({
+    .pipe(macdmg({
       source: 'test/appdmg.json',
       target: 'test.dmg'
     }));

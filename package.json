@@ -1,6 +1,6 @@
 {
   "name": "gulp-macdmg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generate beautiful DMG-images for your OS X applications.",
   "main": "index.js",
   "repository": {
