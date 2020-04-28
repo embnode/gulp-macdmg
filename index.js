@@ -1,9 +1,9 @@
 var appdmg = require('appdmg');
 var through = require('through2');
-var gutil = require('gulp-util');
+var PluginError = require('plugin-error');
+var log = require('fancy-log');
 
-var PluginError = gutil.PluginError;
-var PLUGIN_NAME = 'gulp-appdmg';
+var PLUGIN_NAME = 'gulp-macdmg';
 
 module.exports = function(options) {
   var stream = through.obj(function(file, encoding, next) {
@@ -13,7 +13,7 @@ module.exports = function(options) {
     var ee = appdmg(options);
 
     ee.on('progress', function(info) {
-      gutil.log(info.current + '/' + info.total + ' ' + info.type + ' ' + (info.title || info.status));
+      log(info.current + '/' + info.total + ' ' + info.type + ' ' + (info.title || info.status));
     });
 
     ee.on('error', function(err) {

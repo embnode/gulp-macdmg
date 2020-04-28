@@ -8,12 +8,12 @@ var gulp = require('gulp');
 
 require('mocha');
 
-describe('gulp-appdmg', function() {
+describe('gulp-macdmg', function() {
 
   it('default test', function(done) {
     var errored = false;
 
-    gulp.src([])
+    gulp.src(["."])
       .pipe(appdmg({
         source: 'test/res/appdmg.json',
         target: 'test/build/app.dmg'
